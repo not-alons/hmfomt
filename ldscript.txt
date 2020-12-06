@@ -1,0 +1,18 @@
+OUTPUT_ARCH(arm)
+
+SECTIONS
+{
+    . = 0x08000000;
+    .text :
+    ALIGN(4)
+    {
+        asm/code.o(.text);
+        data/data.o(.rodata);
+    } = 0
+
+    /* Discard everything not specifically mentioned above. */
+    /DISCARD/ :
+    {
+        *(*);
+    }
+}
