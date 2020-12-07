@@ -19,13 +19,22 @@ endif
 
 BUILD_NAME := hmfomt
 
+#### Build Files ####
+
+CC1      := tools/agbcc/bin/agbcc$(EXE)
+CC1_OLD  := tools/agbcc/bin/old_agbcc$(EXE)
+
+CPPFLAGS := -I tools/agbcc/include -I tools/agbcc -iquote include -Wno-trigraphs
+CFLAGS   := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm
 ASFLAGS  := -mcpu=arm7tdmi
 
+C_SUBDIR = src
 ASM_SUBDIR = asm
 DATA_ASM_SUBDIR = data
 BUILD_DIR = build
 
 
+C_BUILDDIR = $(BUILD_DIR)/$(C_SUBDIR)
 ASM_BUILDDIR = $(BUILD_DIR)/$(ASM_SUBDIR)
 DATA_ASM_BUILDDIR = $(BUILD_DIR)/$(DATA_ASM_SUBDIR)
 
@@ -37,6 +46,8 @@ ELF          := $(ROM:.gba=.elf)
 MAP          := $(ROM:.gba=.map)
 LDSCRIPT     := ldscript.txt
 
+C_SRCS := $(wildcard $(C_SUBDIR)/*.c $(C_SUBDIR)/*/*.c $(C_SUBDIR)/*/*/*.c)
+C_OBJS := $(patsubst $(C_SUBDIR)/%.c,$(C_BUILDDIR)/%.o,$(C_SRCS))
 
 ASM_SRCS := $(wildcard $(ASM_SUBDIR)/*.s)
 ASM_OBJS := $(patsubst $(ASM_SUBDIR)/%.s,$(ASM_BUILDDIR)/%.o,$(ASM_SRCS))
@@ -57,6 +68,12 @@ $(ROM): $(ELF)
 
 $(ELF): $(ALL_OBJS) $(LDSCRIPT)
 	cd $(BUILD_DIR) && $(LD) -T ../$(LDSCRIPT) -Map ../$(MAP) -o ../$@
+
+$(C_BUILDDIR)/%.o: $(C_SUBDIR)/%.c
+	$(CPP) $(CPPFLAGS) $< -o $(C_BUILDDIR)/$*.i
+	$(CC1) $(CFLAGS) $(C_BUILDDIR)/$*.i -o $(C_BUILDDIR)/$*.s
+	echo -e ".text\n\t.align\t2, 0\n" >> $(C_BUILDDIR)/$*.s
+	$(AS) $(ASFLAGS) $(C_BUILDDIR)/$*.s -o $@ 
 
 $(ASM_BUILDDIR)/%.o: $(ASM_SUBDIR)/%.s
 	$(AS) $(ASFLAGS) $< -o $@
