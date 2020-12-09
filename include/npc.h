@@ -1,7 +1,14 @@
-#include "types.h"
+#include "global.h"
 
 struct NPC {
-    u32 unk_0x0;   //0-3
-    u32 unk_0x4;   //4-7
-    u8 friendship; //8
+    //0-7
+    u32 unk_0x0;
+    u32 unk_0x4;
+    //8-11
+    u32 friendship:8;
+    u32 daysLastSpoken:5;
+    u32 spokenToday:1;
+    u32 spokenCurrentArea:1;
+    u32 givenGift:1;
+    u32 spokenEver:1;
 };
