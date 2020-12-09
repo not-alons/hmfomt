@@ -10,6 +10,7 @@ SECTIONS
         
         src/npc.o(.text);
         src/bachelorette.o(.text);
+        src/harvest_sprite.o(.text);
 
         asm/code1.o(.text);
         data/data.o(.rodata);

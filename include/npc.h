@@ -23,5 +23,11 @@ u32 sub_809E340(struct NPC *npc);
 //Returns spokenToday
 bool8 sub_809E350(struct NPC *npc);
 
+//Increases/decreases an NPC's friendship
+void sub_809E370(struct NPC *npc, u32 amount);
+
+//Decreases an NPC's friendship
+void sub_809E38C(struct NPC *npc, u32 amount);
+
 //Checks if the player spoke to an NPC that day and in/decreases friendship
 void sub_809E3E8(struct NPC *npc, u32 param);
