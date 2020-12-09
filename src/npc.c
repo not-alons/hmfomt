@@ -5,13 +5,13 @@ void * sub_809E32C(struct NPC *npc_0,struct NPC *npc_1){
     memcpy(npc_0, npc_1, 8);
 }
 
-//returns an NPC's friendship
+//Returns an NPC's friendship
 u8 sub_809E33C(struct NPC *npc) {
     return npc->friendship;
 }
 
 //Returns the days since you last spoke to this NPC
-u8 sub_809E340(struct NPC *npc) {
+u32 sub_809E340(struct NPC *npc) {
     return npc->daysLastSpoken;
 }
 

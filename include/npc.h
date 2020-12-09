@@ -2,8 +2,8 @@
 
 struct NPC {
     //0-7
-    u32 unk_0x0;
-    u32 unk_0x4;
+    u32 unk_0x00;
+    u32 unk_0x04;
     //8-11
     u32 friendship:8;
     u32 daysLastSpoken:5;
@@ -11,4 +11,17 @@ struct NPC {
     u32 spokenCurrentArea:1;
     u32 givenGift:1;
     u32 spokenEver:1;
+    u32 unk_0x0A:15;
+    //12-19
+    u32 unk_0x0C;
+    u32 unk_0x10;
 };
+
+//Returns the days since you last spoke to this NPC
+u32 sub_809E340(struct NPC *npc);
+
+//Returns spokenToday
+bool8 sub_809E350(struct NPC *npc);
+
+//Checks if the player spoke to an NPC that day and in/decreases friendship
+void sub_809E3E8(struct NPC *npc, u32 param);
