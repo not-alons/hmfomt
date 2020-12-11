@@ -7,7 +7,9 @@ SECTIONS
     ALIGN(4)
     {
         asm/code.o(.text);
-        
+        src/animal.o(.text);
+        asm/code0.o(.text);
+
         src/npc.o(.text);
         src/bachelorette.o(.text);
         src/harvest_sprite.o(.text);

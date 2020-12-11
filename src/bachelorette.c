@@ -110,7 +110,7 @@ void sub_809E574(struct Bachelorette *bach, u8 param_2, u32 param_3){
     if(sub_809E340(&bach->npc) && param_3 < 10)
         sub_809E4E8(bach, 200);
 
-    if(param_2 != 0){
+    if(param_2){
         if((u32)bach->playerEvents > 5){
             if(4 < sub_809E340(&bach->npc) && (s32)sub_80D0ED0(sub_80D11E4(), 100) < 10) //No idea what these last two do
                 sub_809E4E8(bach, 1000); //Decrease love points
