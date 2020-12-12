@@ -1,9 +1,5 @@
 #include "animal.h"
 
-//Unknown function
-extern u32 sub_80D0ED0(u32 param_1, u32 param_2);
-//Unknown function
-extern u32 sub_80D11E4();
 //Calculates array length
 extern u32 sub_80D3B78(u8 *arr);
 //Copies one array to another

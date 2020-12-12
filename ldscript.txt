@@ -7,7 +7,10 @@ SECTIONS
     ALIGN(4)
     {
         asm/code.o(.text);
+
         src/animal.o(.text);
+        src/pet.o(.text);
+        
         asm/code0.o(.text);
 
         src/npc.o(.text);
