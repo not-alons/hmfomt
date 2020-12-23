@@ -13,6 +13,9 @@ SECTIONS
         src/livestock.o(.text);
         asm/sub_809B674.o(.text);
         src/barn_animal.o(.text);
+        asm/dog.o(.text);
+        src/dog.o(.text);
+        src/horse.o(.text);
 
         asm/code0.o(.text);
 

@@ -6,7 +6,6 @@ extern u32 sub_80D0ED0(u32 param_1, u32 param_2);
 extern u32 sub_80D11E4();
 
 //Initializes a pet struct with a name
-//Used by the dog
 struct Pet * sub_809B32C(struct Pet *pet, u8 *name, u32 *param, u32 age){
     sub_809B12C(&pet->animal, name, param, age);
     pet->_0x1C = 0;
@@ -16,7 +15,6 @@ struct Pet * sub_809B32C(struct Pet *pet, u8 *name, u32 *param, u32 age){
 }
 
 //Initializes a pet struct without a name
-//Used by the horse
 struct Pet * sub_809B350(struct Pet *pet, u32 *param, u32 age){
     sub_809B1A4(&pet->animal, param, age);
     pet->_0x1C = 0;
