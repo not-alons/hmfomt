@@ -16,6 +16,11 @@ SECTIONS
         asm/dog.o(.text);
         src/dog.o(.text);
         src/horse.o(.text);
+        src/chicken.o(.text);
+        src/cow.o(.text);
+        src/sheep.o(.text);
+        asm/sub_809BF00.o(.text);
+        src/sheep_cont.o(.text);
 
         asm/code0.o(.text);
 
