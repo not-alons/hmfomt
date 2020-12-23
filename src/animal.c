@@ -60,6 +60,7 @@ struct Animal * sub_809B1A4(struct Animal *animal, u32* param, u32 age){
 }
 
 //Returns a pointer to an animal's name if it isn't empty, otherwise returns a pointer to 0x08103658
+//TODO: Replace fixed pointer
 u8 * sub_809B1F4(struct Animal *animal){
     u8 *temp = animal->name;
     u8 empty = temp[0] == 0;

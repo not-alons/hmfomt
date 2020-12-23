@@ -10,7 +10,10 @@ SECTIONS
 
         src/animal.o(.text);
         src/pet.o(.text);
-        
+        src/livestock.o(.text);
+        asm/sub_809B674.o(.text);
+        src/barn_animal.o(.text);
+
         asm/code0.o(.text);
 
         src/npc.o(.text);

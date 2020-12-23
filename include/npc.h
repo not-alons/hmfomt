@@ -11,7 +11,6 @@ struct NPC {
     u32 spokenCurrentArea:1;
     u32 givenGift:1;
     u32 spokenEver:1;
-    u32 unk_0x0A:15;
     //12-19
     u32 unk_0x0C;
     u32 unk_0x10;

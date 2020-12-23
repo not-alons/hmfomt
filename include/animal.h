@@ -19,6 +19,12 @@ struct Animal {
 struct Animal * sub_809B12C(struct Animal *animal, u8 *name, u32* param, u32 age);
 //Initializes an animal struct without a name
 struct Animal * sub_809B1A4(struct Animal *animal, u32* param, u32 age);
+//Returns whether the animal has won a festival
+bool8 sub_809B218(struct Animal *animal);
+//Returns an animal's age
+u32 sub_809B220(struct Animal *animal);
+//Returns an animal's affection
+u32 sub_809B228(struct Animal *animal);
 //Returns whether the animal has been brushed
 bool8 sub_809B230(struct Animal *animal);
 //Returns whether the animal has been talked to
