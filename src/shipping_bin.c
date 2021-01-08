@@ -10,12 +10,12 @@ ShippingBin * sub_800B0DC(ShippingBin *sbin){
         sub_800B26C(&sbin->shippingData[index]);
 
     for(index = 0; index < 22; index++)
-        sub_800B2D4(&sbin->shippingData[gUnk080E95CC[index]]);
+        sub_800B2D4(&sbin->shippingData[gUnk_80E95CC[index]]);
 
     return sbin;
 }
 
-//Sets the shipping bin's value
+//Returns the shipping bin's value
 u32 sub_800B120(ShippingBin *sbin){
     return sbin->value;
 }
@@ -55,7 +55,7 @@ u8 sub_800B18C(ShippingBin *sbin){
     u32 product;
 
     while(1){
-        product = gUnk080E95E2[temp];
+        product = gUnk_80E95E2[temp];
         if(!(u8)sub_800B280(&sbin->shippingData[product]) || !sub_800B288(&sbin->shippingData[product]))
             return 0;
 
@@ -70,7 +70,7 @@ u8 sub_800B1CC(ShippingBin *sbin){
     u32 product;
 
     while(1){
-        product = gUnk080E95F1[temp];
+        product = gUnk_80E95F1[temp];
         if(!(u8)sub_800B280(&sbin->shippingData[product]) || !sub_800B288(&sbin->shippingData[product]))
             return 0;
 
@@ -80,8 +80,8 @@ u8 sub_800B1CC(ShippingBin *sbin){
 }
 
 
-u32 sub_800E198();
 u32 sub_800E194();
+u32 sub_800E198();
 
 //Adds to the shipping bin's value
 void sub_800B20C(ShippingBin *sbin, u32 *param) {

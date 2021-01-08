@@ -10,21 +10,17 @@ SECTIONS
 
         src/shipping_bin.o(.text);
 
-        asm/code_800B120.o(.text);
+        asm/code_800B2EC.o(.text);
 
         src/animal.o(.text);
         src/pet.o(.text);
         src/livestock.o(.text);
-        asm/sub_809B674.o(.text);
         src/barn_animal.o(.text);
-        asm/dog.o(.text);
         src/dog.o(.text);
         src/horse.o(.text);
         src/chicken.o(.text);
         src/cow.o(.text);
         src/sheep.o(.text);
-        asm/sub_809BF00.o(.text);
-        src/sheep_cont.o(.text);
 
         asm/code0.o(.text);
 
@@ -35,10 +31,6 @@ SECTIONS
         asm/code1.o(.text);
         data/data.o(.rodata);
     } = 0
-
-    gUnk080E95CC = 0x080E95CC;
-    gUnk080E95E2 = 0x080E95E2;
-    gUnk080E95F1 = 0x080E95F1;
 
     /* Discard everything not specifically mentioned above. */
     /DISCARD/ :

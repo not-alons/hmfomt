@@ -4,6 +4,7 @@
 extern u32 sub_80D11E4();
 extern u32 sub_80D0ED0(u32 param_1, u32 param_2);
 
+extern u8 gUnk_8103680[];
 
 //Initializes a cow struct with a name
 struct Cow * sub_809BD48(struct Cow *cow, u8 *name, u32 *param, u32 age, u32 daysFed){
@@ -71,8 +72,7 @@ u32 sub_809BE44(struct Cow *cow){
 }
 
 //Checks if you fed a cow and resets the milked flag
-//TODO: Replace fixed pointer
 void sub_809BE74(struct Cow *cow){
-    sub_809B970(&cow->barnAnimal, (u8 *)0x08103680);
+    sub_809B970(&cow->barnAnimal, gUnk_8103680);
     cow->milked = FALSE;
 }

@@ -14,9 +14,9 @@ typedef struct ShippingBin{
     ProductShippingData shippingData[NUM_PRODUCTS];
 } ShippingBin;
 
-extern u8 gUnk080E95CC[];
-extern u8 gUnk080E95E2[];
-extern u8 gUnk080E95F1[];
+extern u8 gUnk_80E95CC[];
+extern u8 gUnk_80E95E2[];
+extern u8 gUnk_80E95F1[];
 
 //Resets a ProductShippingData struct
 void sub_800B26C(ProductShippingData *);

@@ -5,6 +5,7 @@ extern u32 sub_80D3B78(u8 *arr);
 //Copies one array to another
 extern void sub_80D3994(u8 *dest, u8 *src, u32 length);
 
+extern u8 gUnk_8103658[];
 
 //Copies the first 8 bytes of one animal to another and returns a pointer
 void * sub_809B104(u32 *dest, u32 *src){
@@ -59,8 +60,7 @@ struct Animal * sub_809B1A4(struct Animal *animal, u32* param, u32 age){
     return animal;
 }
 
-//Returns a pointer to an animal's name if it isn't empty, otherwise returns a pointer to 0x08103658
-//TODO: Replace fixed pointer
+//Returns a pointer to an animal's name if it isn't empty, otherwise returns gUnk_8103658
 u8 * sub_809B1F4(struct Animal *animal){
     u8 *temp = animal->name;
     u8 empty = temp[0] == 0;
@@ -68,7 +68,7 @@ u8 * sub_809B1F4(struct Animal *animal){
     if(!empty)
         return temp;
     else
-        return (u8 *)0x08103658;
+        return gUnk_8103658;
 }
 
 //Returns whether the animal has won a festival

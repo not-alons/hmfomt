@@ -4,6 +4,8 @@
 extern u32 sub_80D11E4();
 extern u32 sub_80D0ED0(u32 param_1, u32 param_2);
 
+extern u8 gUnk_8103660[];
+
 //Initializes a chicken struct with a name
 struct Chicken * sub_809BC64(struct Chicken *chicken, u8*name, u32 *param, u32 age, u32 daysFed){
     sub_809B454(&chicken->lstock, name, param, age, daysFed);
@@ -69,7 +71,6 @@ void sub_809BD2C(struct Chicken *chicken, u32* param){
 }
 
 //Checks if you fed a chicken
-//TODO: Replace fixed pointer
 void sub_809BD38(struct Chicken *chicken, u32* param){
-    sub_809B674(&chicken->lstock, (u8 *)0x08103660);
+    sub_809B674(&chicken->lstock, gUnk_8103660);
 }
