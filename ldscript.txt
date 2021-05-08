@@ -9,8 +9,9 @@ SECTIONS
         asm/code.o(.text);
 
         src/shipping_bin.o(.text);
-
         asm/code_800B2EC.o(.text);
+        src/code_800DB2C.o(.text); /* ToolSlot */
+        asm/code_800DCA8.o(.text);
 
         src/animal.o(.text);
         src/pet.o(.text);
