@@ -9,12 +9,18 @@ SECTIONS
         asm/code.o(.text);
 
         src/shipping_bin.o(.text);
-        src/code_800B2EC.o(.text); /* ToolBox  */
-        src/code_800B660.o(.text); /* Fridge   */
-        asm/code_800B910.o(.text);
-        src/code_800DB2C.o(.text); /* ToolSlot */
-        src/code_800DCA8.o(.text); /* FoodSlot */
-        asm/code_800DF50.o(.text);
+        
+        src/code_800B2EC.o(.text); /* ToolBox     */
+        src/code_800B660.o(.text); /* Fridge      */
+        src/code_800B910.o(.text); /* Shelf       */
+
+        asm/code_800BB60.o(.text);
+        
+        src/code_800DB2C.o(.text); /* ToolSlot    */
+        src/code_800DCA8.o(.text); /* FoodSlot    */
+        src/code_800DF50.o(.text); /* ArticleSlot */
+
+        asm/code_800E0F0.o(.text);
 
         src/animal.o(.text);
         src/pet.o(.text);
