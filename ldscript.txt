@@ -6,7 +6,7 @@ SECTIONS
     .text :
     ALIGN(4)
     {
-        asm/code.o(.text);
+        asm/code_8000000.o(.text);
 
         src/shipping_bin.o(.text);
         
@@ -32,13 +32,13 @@ SECTIONS
         src/cow.o(.text);
         src/sheep.o(.text);
 
-        asm/code0.o(.text);
+        asm/code_809BFE8.o(.text);
 
         src/npc.o(.text);
         src/bachelorette.o(.text);
         src/harvest_sprite.o(.text);
 
-        asm/code1.o(.text);
+        asm/code_809E804.o(.text);
         data/data.o(.rodata);
     } = 0
 
