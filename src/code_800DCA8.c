@@ -15,14 +15,14 @@ u32 sub_800DCB4(FoodSlot *slot) {
 }
 
 // Returns a pointer to a slot's tool name
-u8 * sub_800DCB8(FoodSlot *slot) {
+const u8 * sub_800DCB8(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].name;
     else
-        return gUnk_80E963C;
+        return gText_BrokenFood;
 }
 
 // Returns a slot's unknown short
@@ -121,7 +121,7 @@ u8 sub_800DDAC(FoodSlot *slot) {
 }
 
 // Returns a pointer to a slot's food description
-u8 * sub_800DDD4(FoodSlot *slot) {
+const u8 * sub_800DDD4(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
@@ -129,13 +129,13 @@ u8 * sub_800DDD4(FoodSlot *slot) {
         if(gUnk_80EDCD8[slot->food].desc != NULL)
             return gUnk_80EDCD8[slot->food].desc;
         else
-            return gUnk_80E962C;
+            return gText_NoExplanation;
     }
     
 #ifndef NONMATCHING
     return (u8 *)0x080E962C;
 #else
-    return gUnk_80E962C;
+    return gText_NoExplanation;
 #endif
 }
 

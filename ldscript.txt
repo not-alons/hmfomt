@@ -41,7 +41,10 @@ SECTIONS
         src/harvest_sprite.o(.text);
 
         asm/code_809E804.o(.text);
-        data/data.o(.rodata);
+        
+        data/data_80E59CC.o(.rodata);
+        src/data/tools.o(.rodata);
+        data/data_80EAED8.o(.rodata);
     } = 0
 
     /* Discard everything not specifically mentioned above. */

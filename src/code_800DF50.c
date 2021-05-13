@@ -11,14 +11,14 @@ s32 sub_800DF54(ArticleSlot *slot) {
 }
 
 // Returns a pointer to a slot's article name
-u8 * sub_800DF58(ArticleSlot *slot) {
+const u8 * sub_800DF58(ArticleSlot *slot) {
     u8 article = slot->article;
     u8 bool = article < NUM_ARTICLES;
 
     if(bool)
         return gUnk_80EFED4[slot->article].name;
     else
-        return gUnk_80E9648;
+        return gText_BrokenArticle;
 }
 
 // Returns a slot's unknown short
@@ -52,7 +52,7 @@ u8 sub_800DFB0(ArticleSlot *slot) {
 }
 
 // Returns a pointer to a slot's article description
-u8 * sub_800DFD4(ArticleSlot *slot){
+const u8 * sub_800DFD4(ArticleSlot *slot){
     u8 article = slot->article;
     u8 bool = article < NUM_ARTICLES;
 
@@ -60,13 +60,13 @@ u8 * sub_800DFD4(ArticleSlot *slot){
         if(gUnk_80EFED4[slot->article].desc != NULL)
             return gUnk_80EFED4[slot->article].desc;
         else
-            return gUnk_80E962C;
+            return gText_NoExplanation;
     }
     
 #ifndef NONMATCHING
     return (u8 *)0x080E962C;
 #else
-    return gUnk_80E962C;
+    return gText_NoExplanation;
 #endif
 }
 

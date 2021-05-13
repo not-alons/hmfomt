@@ -11,14 +11,14 @@ u32 sub_800DB30(ToolSlot *slot) {
 }
 
 // Returns a pointer to a slot's tool name
-u8 * sub_800DB34(ToolSlot *slot) {
+const u8 * sub_800DB34(ToolSlot *slot) {
     u8 tool = slot->tool;
     u8 bool = tool < NUM_TOOLS;
 
     if(bool)
-        return gUnk_80EAB0C[slot->tool].name;
+        return gTools[slot->tool].name;
     else
-        return gUnk_80E9620;
+        return gText_BrokenTool;
 }
 
 // Returns a slot's unknown short
@@ -27,27 +27,27 @@ u16 sub_800DB60(ToolSlot *slot) {
     u8 bool = tool < NUM_TOOLS;
 
     if(bool)
-        return gUnk_80EAB0C[slot->tool].unk;
+        return gTools[slot->tool].unk;
     else
         return 457;// 0x1C9
 }
 
 // Returns a pointer to a slot's tool description
-u8 * sub_800DB8C(ToolSlot *slot) {
+const u8 * sub_800DB8C(ToolSlot *slot) {
     u8 tool = slot->tool;
     u8 bool = tool < NUM_TOOLS;
 
     if(bool){
-        if(gUnk_80EAB0C[slot->tool].desc != NULL)
-            return gUnk_80EAB0C[slot->tool].desc;
+        if(gTools[slot->tool].desc != NULL)
+            return gTools[slot->tool].desc;
         else
-            return gUnk_80E962C;
+            return gText_NoExplanation;
     }
     
 #ifndef NONMATCHING
     return (u8 *)0x080E962C;
 #else
-    return gUnk_80E962C;
+    return gText_NoExplanation;
 #endif
 }
 
