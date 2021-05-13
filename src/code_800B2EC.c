@@ -1,22 +1,4 @@
-#include "global.h"
-
-typedef struct __attribute__((__packed__)) ToolSlot{
-    u8 tool;
-    u8 quantity;
-}ToolSlot;
-
-typedef struct ToolChest{
-    ToolSlot slots[64];
-}ToolChest;
-
-// Returns whether a slot is empty or not
-bool8 sub_800DC34(ToolSlot *slot);
-// Returns a slot's tool
-u32 sub_800DB30(ToolSlot *slot);
-// Returns a slot's tool
-u8 sub_800DC10(ToolSlot *slot);
-// Returns a slot's quantity
-u32 sub_800DC48(ToolSlot *slot);
+#include "inventory.h"
 
 // Initializes a chest and places the starting tools inside it
 NAKED

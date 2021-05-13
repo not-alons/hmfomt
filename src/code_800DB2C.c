@@ -1,24 +1,4 @@
-#include "global.h"
-
-typedef enum Tool {
-    TOOL_NONE = 81,
-    NUM_TOOLS = TOOL_NONE
-} Tool;
-
-typedef struct ToolSlot {
-    u8 tool;
-    u8 quantity;
-} ToolSlot;
-
-typedef struct ToolData {
-    u8 * name;
-    u16 unk;
-    u8 * desc;
-} ToolData;
-
-extern ToolData gUnk_80EAB0C[];
-extern u8 gUnk_80E9620[];
-extern u8 gUnk_80E962C[];
+#include "inventory.h"
 
 // Sets a slot's tool
 void sub_800DB2C(ToolSlot *slot, u8 tool) {
@@ -26,7 +6,7 @@ void sub_800DB2C(ToolSlot *slot, u8 tool) {
 }
 
 // Returns a slot's tool
-u8 sub_800DB30(ToolSlot *slot) {
+u32 sub_800DB30(ToolSlot *slot) {
     return slot->tool;
 }
 
@@ -128,7 +108,7 @@ bool8 sub_800DC34(ToolSlot *slot) {
 }
 
 // Returns a slot's quantity
-u8 sub_800DC48(ToolSlot *slot) {
+u32 sub_800DC48(ToolSlot *slot) {
     if(slot->quantity != 0)
         return slot->quantity;
     else

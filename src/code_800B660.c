@@ -1,33 +1,4 @@
-#include "global.h"
-
-typedef struct FoodSlot {
-    u8 food;
-    s8 unk_0x1;
-    s8 unk_0x2;
-    u8 quantity;
-} FoodSlot;
-
-typedef struct Fridge {
-    FoodSlot slots[64];
-} Fridge;
-
-// Returns a slot's food
-u32 sub_800DCB4(FoodSlot *slot);
-// Initializes a food slot
-FoodSlot * sub_800DE68(FoodSlot *slot);
-// Initializes a food slot
-FoodSlot * sub_800DEB8(FoodSlot *slot1, FoodSlot *slot2);
-// Returns whether a slot is empty or not
-u8 sub_800DEDC(FoodSlot *slot);
-// Returns a slot's quantity
-u32 sub_800DEF0(FoodSlot *slot);
-
-struct UnkStruct {
-    u32 _0;
-    u32 _4;
-    u32 _8;
-    u32 _C;
-};
+#include "inventory.h"
 
 // Initializes the fridge
 Fridge * sub_800B660(Fridge *fridge) {

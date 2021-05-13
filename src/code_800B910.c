@@ -1,24 +1,4 @@
-#include "global.h"
-
-typedef struct __attribute__((__packed__)) ArticleSlot {
-    u8 article;
-    u8 quantity;
-} ArticleSlot;
-
-typedef struct Shelf {
-    ArticleSlot slots[64];
-} Shelf;
-
-// Initializes an article slot
-ArticleSlot * sub_800E010(ArticleSlot *slot);
-// Returns whether a slot is empty or not
-bool8 sub_800E07C(ArticleSlot *slot);
-// Returns a slot's article
-u32 sub_800E058(ArticleSlot *slot);
-// Returns a slot's article
-u32 sub_800DF54(ArticleSlot *slot);
-// Returns a slot's quantity
-u32 sub_800E090(ArticleSlot *slot);
+#include "inventory.h"
 
 // Initializes the shelf
 Shelf * sub_800B8E4(Shelf *shelf) {

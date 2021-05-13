@@ -1,24 +1,4 @@
-#include "global.h"
-
-typedef struct FoodSlot {
-    u8 food;
-    s8 unk_0x1;
-    s8 unk_0x2;
-    u8 quantity;
-} FoodSlot;
-
-typedef struct FoodData {
-    u8* name;
-    u8 unk_0x4:1;
-    s8 unk_0x5;
-    s8 unk_0x6;
-    u16 unk_0x8;
-    u8* desc;
-} FoodData;
-
-extern FoodData gUnk_80EDCD8[];
-extern u8 gUnk_80E963C[];
-extern u8 gUnk_80E962C[];
+#include "inventory.h"
 
 // Initializes a food slot
 FoodSlot * sub_800DCA8(FoodSlot *slot, u8 food) {
@@ -37,7 +17,7 @@ u32 sub_800DCB4(FoodSlot *slot) {
 // Returns a pointer to a slot's tool name
 u8 * sub_800DCB8(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].name;
@@ -48,7 +28,7 @@ u8 * sub_800DCB8(FoodSlot *slot) {
 // Returns a slot's unknown short
 u16 sub_800DCE0(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].unk_0x8;
@@ -56,11 +36,10 @@ u16 sub_800DCE0(FoodSlot *slot) {
         return 0x1AC;
 }
 
-
 // Returns a slot's unknown s8 + some modifier
 s32 sub_800DD08(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].unk_0x5 + slot->unk_0x1;
@@ -71,7 +50,7 @@ s32 sub_800DD08(FoodSlot *slot) {
 // Returns a slot's second unknown s8 + some modifier
 s32 sub_800DD3C(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].unk_0x6 + slot->unk_0x2;
@@ -133,7 +112,7 @@ s32 sub_800DD8C(FoodSlot *slot) {
 // Returns a slot's unknown flag
 u8 sub_800DDAC(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool)
         return gUnk_80EDCD8[slot->food].unk_0x4;
@@ -144,7 +123,7 @@ u8 sub_800DDAC(FoodSlot *slot) {
 // Returns a pointer to a slot's food description
 u8 * sub_800DDD4(FoodSlot *slot) {
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool){
         if(gUnk_80EDCD8[slot->food].desc != NULL)
@@ -164,7 +143,7 @@ u8 * sub_800DDD4(FoodSlot *slot) {
 void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2) {
     s32 total;
     u8 food = slot->food;
-    u8 bool = food < 0xAB;
+    u8 bool = food < NUM_FOODS;
 
     if(bool){
         total = slot->unk_0x1 + param1;
@@ -189,7 +168,7 @@ void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2) {
 
 // Initializes a food slot
 FoodSlot * sub_800DE68(FoodSlot *slot) {
-    sub_800DCA8(slot, 0xAB);
+    sub_800DCA8(slot, FOOD_NONE);
     slot->quantity = 0;
     
     return slot;
@@ -239,7 +218,7 @@ FoodSlot * sub_800DEB8(FoodSlot *slot1, FoodSlot *slot2) {
     if(slot2->quantity > 0)
         sub_80D3994(slot1, slot2, 3);
     else
-        sub_800DCA8(slot1, 0xAB);
+        sub_800DCA8(slot1, FOOD_NONE);
     return slot1;
 }
 

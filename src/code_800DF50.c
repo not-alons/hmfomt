@@ -1,34 +1,4 @@
-#include "global.h"
-
-enum Article {
-    ARTICLE_JEWEL_GODDESS = 37,
-    ARTICLE_JEWEL_KAPPA,
-    ARTICLE_JEWEL_TRUTH,
-    ARTICLE_KAREN_WINE = 59,
-    ARTICLE_POPURI_MUD_BALL,
-    ARTICLE_ANN_MUSIC_BOX,
-    ARTICLE_MARY_GREAT_BOOK,
-    ARTICLE_ELLI_PRESSED_FLOWER,
-    ARTICLE_FRISBEE = 94,
-    ARTICLE_NONE,
-    NUM_ARTICLES = ARTICLE_NONE
-};
-
-typedef struct ArticleSlot {
-    u8 article;
-    u8 quantity;
-} ArticleSlot;
-
-typedef struct ArticleData {
-    u8* name;
-    u16 unk;
-    u8* desc;
-} ArticleData;
-
-extern ArticleData gUnk_80EFED4[];
-extern u8 gUnk_80E9648[];
-extern u8 gUnk_80E962C[];
-
+#include "inventory.h"
 
 // Sets a slot's article
 void sub_800DF50(ArticleSlot *slot, u8 article) {
