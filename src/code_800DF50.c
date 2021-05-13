@@ -36,7 +36,7 @@ void sub_800DF50(ArticleSlot *slot, u8 article) {
 }
 
 // Returns a slot's article
-u32 sub_800DF54(ArticleSlot *slot) {
+s32 sub_800DF54(ArticleSlot *slot) {
     return slot->article;
 }
 
@@ -63,36 +63,11 @@ u16 sub_800DF84(ArticleSlot *slot) {
 }
 
 // Returns whether a slot's article can be gift wrapped
-NAKED
-u8 sub_800DFB0(ArticleSlot *slot){
-    asm_unified("\n\
-        push {lr}\n\
-        ldrb r0, [r0]\n\
-        cmp r0, #0x3f\n\
-        bgt _0800DFC6\n\
-        cmp r0, #0x3b\n\
-        bge _0800DFCE\n\
-        cmp r0, #0x27\n\
-        bgt _0800DFCA\n\
-        cmp r0, #0x25\n\
-        blt _0800DFCA\n\
-        b _0800DFCE\n\
-    _0800DFC6:\n\
-        cmp r0, #0x5e\n\
-        beq _0800DFCE\n\
-    _0800DFCA:\n\
-        movs r0, #1\n\
-        b _0800DFD0\n\
-    _0800DFCE:\n\
-        movs r0, #0\n\
-    _0800DFD0:\n\
-        pop {r1}\n\
-        bx r1\n\
-    ");
-}
-/*
-u8 sub_800DFB0(ArticleSlot *slot){
-    switch(slot->article){
+u8 sub_800DFB0(ArticleSlot *slot) {
+    switch(slot->article) {
+        default:
+            return TRUE;
+
         case ARTICLE_JEWEL_GODDESS:
         case ARTICLE_JEWEL_KAPPA:
         case ARTICLE_JEWEL_TRUTH:
@@ -103,11 +78,8 @@ u8 sub_800DFB0(ArticleSlot *slot){
         case ARTICLE_ELLI_PRESSED_FLOWER:
         case ARTICLE_FRISBEE:
             return FALSE;
-        default:
-            return TRUE;
     }
 }
-*/
 
 // Returns a pointer to a slot's article description
 u8 * sub_800DFD4(ArticleSlot *slot){
@@ -140,7 +112,7 @@ struct UnkStruct_8 {
     u32 _4;
 };
 
-// Initializes a tool slot
+// Initializes an article slot
 ArticleSlot * sub_800E028(ArticleSlot *slot, u8 article, u32 amount) {
     struct UnkStruct_8 _struct;
     u32 temp;
