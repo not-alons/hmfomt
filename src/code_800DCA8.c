@@ -20,7 +20,7 @@ const u8 * sub_800DCB8(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gUnk_80EDCD8[slot->food].name;
+        return gFoods[slot->food].name;
     else
         return gText_BrokenFood;
 }
@@ -31,7 +31,7 @@ u16 sub_800DCE0(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gUnk_80EDCD8[slot->food].unk_0x8;
+        return gFoods[slot->food].unk_8;
     else
         return 0x1AC;
 }
@@ -42,7 +42,7 @@ s32 sub_800DD08(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gUnk_80EDCD8[slot->food].unk_0x5 + slot->unk_0x1;
+        return gFoods[slot->food].unk_5 + slot->unk_0x1;
     else
         return -100;
 }
@@ -53,7 +53,7 @@ s32 sub_800DD3C(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gUnk_80EDCD8[slot->food].unk_0x6 + slot->unk_0x2;
+        return gFoods[slot->food].unk_6 + slot->unk_0x2;
     else
         return 100;
 }
@@ -115,7 +115,7 @@ u8 sub_800DDAC(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gUnk_80EDCD8[slot->food].unk_0x4;
+        return gFoods[slot->food].unk_4;
     else
         return 0;
 }
@@ -126,8 +126,8 @@ const u8 * sub_800DDD4(FoodSlot *slot) {
     u8 bool = food < NUM_FOODS;
 
     if(bool){
-        if(gUnk_80EDCD8[slot->food].desc != NULL)
-            return gUnk_80EDCD8[slot->food].desc;
+        if(gFoods[slot->food].desc != NULL)
+            return gFoods[slot->food].desc;
         else
             return gText_NoExplanation;
     }

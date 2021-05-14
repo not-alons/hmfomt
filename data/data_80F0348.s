@@ -2,18 +2,6 @@
 
     .global data
 
-	.global gUnk_80EAED8
- gUnk_80EAED8:
-	.incbin "baserom.gba", 0xEAED8, 0x2E00
-
-	.global gUnk_80EDCD8
- gUnk_80EDCD8:
-	.incbin "baserom.gba", 0xEDCD8, 0x21FC
-
-	.global gUnk_80EFED4
- gUnk_80EFED4:
-	.incbin "baserom.gba", 0xEFED4, 0x474
-
 	.global gUnk_80F0348
  gUnk_80F0348:
 	.incbin "baserom.gba", 0xF0348, 0x1A6

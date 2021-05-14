@@ -16,7 +16,7 @@ const u8 * sub_800DF58(ArticleSlot *slot) {
     u8 bool = article < NUM_ARTICLES;
 
     if(bool)
-        return gUnk_80EFED4[slot->article].name;
+        return gArticles[slot->article].name;
     else
         return gText_BrokenArticle;
 }
@@ -27,7 +27,7 @@ u16 sub_800DF84(ArticleSlot *slot) {
     u8 bool = article < NUM_ARTICLES;
 
     if(bool)
-        return gUnk_80EFED4[slot->article].unk;
+        return gArticles[slot->article].unk;
     else
         return 0x1C9;
 }
@@ -57,8 +57,8 @@ const u8 * sub_800DFD4(ArticleSlot *slot){
     u8 bool = article < NUM_ARTICLES;
 
     if(bool){
-        if(gUnk_80EFED4[slot->article].desc != NULL)
-            return gUnk_80EFED4[slot->article].desc;
+        if(gArticles[slot->article].desc != NULL)
+            return gArticles[slot->article].desc;
         else
             return gText_NoExplanation;
     }

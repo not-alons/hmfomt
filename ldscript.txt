@@ -44,7 +44,9 @@ SECTIONS
         
         data/data_80E59CC.o(.rodata);
         src/data/tools.o(.rodata);
-        data/data_80EAED8.o(.rodata);
+        src/data/foods.o(.rodata);
+        src/data/articles.o(.rodata);
+        data/data_80F0348.o(.rodata);
     } = 0
 
     /* Discard everything not specifically mentioned above. */

@@ -97,10 +97,61 @@ enum Articles {
     ARTICLE_FLOWER_MAGIC_BLUE,
     ARTICLE_FLOWER_MAGIC_RED,
     ARTICLE_FLOWER_TOY,
-    ARTICLE_JEWEL_GODDESS = 37,
+    ARTICLE_WOOL_S,
+    ARTICLE_WOOL_M,
+    ARTICLE_WOOL_L,
+    ARTICLE_WOOL_G,
+    ARTICLE_WOOL_P,
+    ARTICLE_WOOL_X,
+    ARTICLE_YARN_S,
+    ARTICLE_YARN_M,
+    ARTICLE_YARN_L,
+    ARTICLE_YARN_G,
+    ARTICLE_YARN_P,
+    ARTICLE_YARN_X,
+    ARTICLE_ORE_JUNK,
+    ARTICLE_ORE_COPPER,
+    ARTICLE_ORE_SILVER,
+    ARTICLE_ORE_GOLD,
+    ARTICLE_ORE_MYSTRILE,
+    ARTICLE_ORE_ORICHALC,
+    ARTICLE_ORE_ADAMANTITE,
+    ARTICLE_STONE_MOON,
+    ARTICLE_SAND_ROSE,
+    ARTICLE_DIAMOND_PINK,
+    ARTICLE_ALEXANDRITE,
+    ARTICLE_STONE_MYTHIC,
+    ARTICLE_DIAMOND,
+    ARTICLE_EMERALD,
+    ARTICLE_RUBY,
+    ARTICLE_TOPAZ,
+    ARTICLE_PERIDOT,
+    ARTICLE_FLUORITE,
+    ARTICLE_AGATE,
+    ARTICLE_AMETHYST,
+    ARTICLE_JEWEL_GODDESS,
     ARTICLE_JEWEL_KAPPA,
     ARTICLE_JEWEL_TRUTH,
-    ARTICLE_KAREN_WINE = 59,
+    ARTICLE_SUN_SPRING,
+    ARTICLE_SUN_SUMMER,
+    ARTICLE_SUN_AUTUMN,
+    ARTICLE_SUN_WINTER,
+    ARTICLE_BRACELET,
+    ARTICLE_NECKLACE,
+    ARTICLE_EARRINGS,
+    ARTICLE_BROACH,
+    ARTICLE_WEEDS,
+    ARTICLE_STONES,
+    ARTICLE_BRANCHES,
+    ARTICLE_RECIPE_FRENCH_FRIES,
+    ARTICLE_RECIPE_KETCHUP,
+    ARTICLE_BALL,
+    ARTICLE_PIRATE_TREASURE,
+    ARTICLE_FOSSIL,
+    ARTICLE_EMPTY_CAN,
+    ARTICLE_BOOTS,
+    ARTICLE_FISH_BONES,
+    ARTICLE_KAREN_WINE,
     ARTICLE_POPURI_MUD_BALL,
     ARTICLE_ANN_MUSIC_BOX,
     ARTICLE_MARY_GREAT_BOOK,
@@ -120,7 +171,22 @@ enum Articles {
     ARTICLE_ALBUM_13,
     ARTICLE_ALBUM_14,
     ARTICLE_ALBUM_15,
-    ARTICLE_FRISBEE = 94,
+    ARTICLE_BAND_AID,
+    ARTICLE_BOOK,
+    ARTICLE_PERFUME,
+    ARTICLE_PHOTO,
+    ARTICLE_PLANT_ENCYCLOPEDIA,
+    ARTICLE_INVITATION,
+    ARTICLE_DRESS,
+    ARTICLE_FACIAL_PACK,
+    ARTICLE_SKIN_LOTION,
+    ARTICLE_SUNBLOCK,
+    ARTICLE_LUMBER,
+    ARTICLE_LUMBER_GOLDEN,
+    ARTICLE_ANIMAL_FODDER,
+    ARTICLE_CHICKEN_FEED,
+    ARTICLE_CERTIFICATE,
+    ARTICLE_FRISBEE,
     ARTICLE_NONE,
     NUM_ARTICLES = ARTICLE_NONE
 };
@@ -153,18 +219,18 @@ typedef struct Tool {
 } Tool;
 
 typedef struct Food {
-    u8* name;
-    u8 unk_0x4:1;
-    s8 unk_0x5;
-    s8 unk_0x6;
-    u16 unk_0x8;
-    u8* desc;
+    const u8* name;
+    u8 unk_4:1; // Uses the drink animation when consumed
+    s8 unk_5;   // Stamina recovered when consumed
+    s8 unk_6;   // Fatigue recovered when consumed
+    u16 unk_8;
+    const u8* desc;
 } Food;
 
 typedef struct Article {
-    u8* name;
+    const u8* name;
     u16 unk;
-    u8* desc;
+    const u8* desc;
 } Article;
 
 
@@ -193,8 +259,8 @@ extern const u8 gText_NoExplanation[];
 extern const u8 gText_BrokenFood[];
 extern const u8 gText_BrokenArticle[];
 extern const Tool gTools[];
-extern Food gUnk_80EDCD8[];
-extern Article gUnk_80EFED4[];
+extern const Food gFoods[];
+extern const Article gArticles[];
 
 
 
