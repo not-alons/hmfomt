@@ -18,6 +18,9 @@ SECTIONS
         src/code_800BE70.o(.text); /* Farm House    */
         asm/code_800C450.o(.text);
         
+        src/code_800CCAC.o(.text); /* CoopSlot & Incubator */
+        asm/code_800CDBC.o(.text);
+        
         src/code_800DB2C.o(.text); /* ToolSlot      */
         src/code_800DCA8.o(.text); /* FoodSlot      */
         src/code_800DF50.o(.text); /* ArticleSlot   */

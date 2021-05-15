@@ -1,8 +1,11 @@
 
+.vscode/
+
 *.dump
 *.elf
 *.gba
 *.map
+
 
 build/
 tools/
