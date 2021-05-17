@@ -1,8 +1,4 @@
-#include "global.h"
-
-typedef enum Product{
-    NUM_PRODUCTS = 103
-} Product;
+#include "inventory.h"
 
 typedef struct ProductShippingData{
     u32 amountShipped:31;

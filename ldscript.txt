@@ -24,8 +24,9 @@ SECTIONS
         src/code_800DB2C.o(.text); /* ToolSlot      */
         src/code_800DCA8.o(.text); /* FoodSlot      */
         src/code_800DF50.o(.text); /* ArticleSlot   */
+        src/code_800E0F0.o(.text); /* ProductSlot   */
 
-        asm/code_800E0F0.o(.text);
+        asm/code_800E268.o(.text);
 
         src/animal.o(.text);
         src/pet.o(.text);

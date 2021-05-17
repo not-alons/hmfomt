@@ -14,7 +14,7 @@ u32 sub_800DCB4(FoodSlot *slot) {
     return slot->food;
 }
 
-// Returns a pointer to a slot's tool name
+// Returns a pointer to a slot's food name
 const u8 * sub_800DCB8(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;

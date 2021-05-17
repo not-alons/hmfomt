@@ -191,6 +191,11 @@ enum Articles {
     NUM_ARTICLES = ARTICLE_NONE
 };
 
+enum Products {
+    PRODUCT_NONE = 103,
+    NUM_PRODUCTS = PRODUCT_NONE
+};
+
 
 
 typedef struct __attribute__((__packed__)) ToolSlot {
@@ -209,6 +214,10 @@ typedef struct __attribute__((__packed__)) ArticleSlot {
     u8 article;
     u8 quantity;
 } ArticleSlot;
+
+typedef struct ProductSlot {
+    u8 product;
+} ProductSlot;
 
 
 
@@ -232,6 +241,12 @@ typedef struct Article {
     u16 unk;
     const u8* desc;
 } Article;
+
+typedef struct Product {
+    u32 price:15;
+    u32 type:1; // Food/Article
+    u32 item:8; // Food/Article
+} Product;
 
 
 
@@ -258,9 +273,11 @@ extern const u8 gText_BrokenTool[];
 extern const u8 gText_NoExplanation[];
 extern const u8 gText_BrokenFood[];
 extern const u8 gText_BrokenArticle[];
+extern const u8 gText_BrokenShipment[];
 extern const Tool gTools[];
 extern const Food gFoods[];
 extern const Article gArticles[];
+extern const Product gUnk_80F0348[];
 
 
 
@@ -282,8 +299,16 @@ bool8 sub_800DC34(ToolSlot *slot);
 // Returns a slot's quantity
 u32 sub_800DC48(ToolSlot *slot);
 
+// Initializes a food slot
+FoodSlot * sub_800DCA8(FoodSlot *slot, u8 food);
 // Returns a slot's food
 u32 sub_800DCB4(FoodSlot *slot);
+// Returns a pointer to a slot's food name
+const u8 * sub_800DCB8(FoodSlot *slot);
+// Returns a slot's unknown short
+u16 sub_800DCE0(FoodSlot *slot);
+// Adds to both slot's unknown s8
+void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2);
 // Initializes a food slot
 FoodSlot * sub_800DE68(FoodSlot *slot);
 // Initializes a food slot
@@ -297,6 +322,10 @@ u32 sub_800DEF0(FoodSlot *slot);
 void sub_800DF50(ArticleSlot *slot, u8 article);
 // Returns a slot's article
 s32 sub_800DF54(ArticleSlot *slot);
+// Returns a pointer to a slot's article name
+const u8 * sub_800DF58(ArticleSlot *slot);
+// Returns a slot's unknown short
+u16 sub_800DF84(ArticleSlot *slot);
 // Initializes an article slot
 ArticleSlot * sub_800E010(ArticleSlot *slot);
 // Initializes a tool slot
