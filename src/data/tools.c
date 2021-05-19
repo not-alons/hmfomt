@@ -1,5 +1,6 @@
 #include "inventory.h"
 
+const u8 gText_BadAlloc[]       = "bad_alloc";       // 0x080E9614
 const u8 gText_BrokenTool[]     = "Broken Tool";     // 0x080E9620
 const u8 gText_NoExplanation[]  = "No Explanation";  // 0x080E962C
 const u8 gText_BrokenFood[]     = "Broken Food";     // 0x080E963C

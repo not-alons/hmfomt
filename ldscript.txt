@@ -12,7 +12,7 @@ SECTIONS
         src/code_800B2EC.o(.text); /* ToolBox       */
         src/code_800B660.o(.text); /* Fridge        */
         src/code_800B910.o(.text); /* Shelf         */
-        src/code_800BB60.o(.text); /* Record Player */
+        src/record_player.o(.text);
 
         asm/code_800BC58.o(.text);
         src/code_800BE70.o(.text); /* Farm House    */
@@ -47,6 +47,8 @@ SECTIONS
         asm/code_809E804.o(.text);
         
         data/data_80E59CC.o(.rodata);
+        src/shipping_bin.o(.rodata);
+        src/record_player.o(.rodata);
         src/data/tools.o(.rodata);
         src/data/foods.o(.rodata);
         src/data/articles.o(.rodata);

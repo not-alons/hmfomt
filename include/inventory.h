@@ -500,7 +500,7 @@ const u8 * sub_800DF58(ArticleSlot *slot);
 u16 sub_800DF84(ArticleSlot *slot);
 // Initializes an article slot
 ArticleSlot * sub_800E010(ArticleSlot *slot);
-// Initializes a tool slot
+// Initializes an article slot
 ArticleSlot * sub_800E028(ArticleSlot *slot, u8 article, u32 amount);
 // Returns a slot's article
 u32 sub_800E058(ArticleSlot *slot);

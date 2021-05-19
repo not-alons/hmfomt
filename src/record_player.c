@@ -1,6 +1,8 @@
 #include "inventory.h"
 
-extern u8 gUnk_80E9605[];
+const u8 unk_80E9605[] = {
+    18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+};
 
 // Initializes the record player
 RecordPlayer * sub_800BB60(RecordPlayer *player) {
@@ -19,7 +21,7 @@ u32 sub_800BB7C(RecordPlayer *player){
     if(!sub_800BB74(player))
         return 199;
     else
-        return gUnk_80E9605[player->album];
+        return unk_80E9605[player->album];
 }
 
 ArticleSlot * sub_800BBA4(ArticleSlot * slot, RecordPlayer *player) {

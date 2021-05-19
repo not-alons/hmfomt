@@ -1493,19 +1493,3 @@
 	.global gUnk_80E93F8
  gUnk_80E93F8:
 	.incbin "baserom.gba", 0xE93F8, 0x1D4
-
-	.global gUnk_80E95CC
- gUnk_80E95CC:
-	.incbin "baserom.gba", 0xE95CC, 0x16
-
-	.global gUnk_80E95E2
- gUnk_80E95E2:
-	.incbin "baserom.gba", 0xE95E2, 0xF
-
-	.global gUnk_80E95F1
- gUnk_80E95F1:
-	.incbin "baserom.gba", 0xE95F1, 0x14
-
-	.global gUnk_80E9605
- gUnk_80E9605:
-	.incbin "baserom.gba", 0xE9605, 0x1B
