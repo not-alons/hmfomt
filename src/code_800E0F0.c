@@ -21,13 +21,13 @@ ProductSlot * sub_800E0FC(ProductSlot *pSlot, FoodSlot fSlot) {
 
     food = sub_800DCB4(&sp);
     product = 0;
-    ptr = &gUnk_80F0348[0];
+    ptr = &gProducts[0];
 
     while(ptr->type || ptr->item != food) {
         if(++product >= PRODUCT_NONE)
             return pSlot;
 
-        ptr = &gUnk_80F0348[product];
+        ptr = &gProducts[product];
     }
 
     pSlot->product = product;
@@ -46,13 +46,13 @@ ProductSlot * sub_800E148(ProductSlot *slot, u8 article) {
 
     _article = sub_800DF54(&sp);
     product = 0;
-    ptr = &gUnk_80F0348[0];
+    ptr = &gProducts[0];
 
     while(!ptr->type || ptr->item != _article) {
         if(++product >= PRODUCT_NONE)
             return slot;
 
-        ptr = &gUnk_80F0348[product];
+        ptr = &gProducts[product];
     }
 
     slot->product = product;
@@ -60,7 +60,7 @@ ProductSlot * sub_800E148(ProductSlot *slot, u8 article) {
 }
 
 // Returns the slot's product
-u8 sub_800E194(ProductSlot *slot) {
+u32 sub_800E194(ProductSlot *slot) {
     return slot->product;
 }
 
@@ -70,7 +70,7 @@ u32 sub_800E198(ProductSlot *slot) {
     u8 bool = product < NUM_PRODUCTS;
 
     if(bool)
-        return gUnk_80F0348[slot->product].price;
+        return gProducts[slot->product].price;
     else
         return 0;
 }
@@ -100,7 +100,7 @@ const u8 * sub_800E1C0(ProductSlot *slot) {
     bool = product < NUM_PRODUCTS;
     
     if(bool) {
-        const Product *ptr = &gUnk_80F0348[product];
+        const Product *ptr = &gProducts[product];
         if(!ptr->type){
             sub_800DCA8((FoodSlot *)&sp, ptr->item);
             return sub_800DCB8((FoodSlot *)&sp);
@@ -126,7 +126,7 @@ u16 sub_800E214(ProductSlot *slot) {
     bool = product < NUM_PRODUCTS;
     
     if(bool) {
-        const Product *ptr = &gUnk_80F0348[product];
+        const Product *ptr = &gProducts[product];
         if(!ptr->type){
             sub_800DCA8((FoodSlot *)&sp, ptr->item);
             return sub_800DCE0((FoodSlot *)&sp);

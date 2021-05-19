@@ -1,5 +1,7 @@
 #include "shipping_bin.h"
 
+
+
 //Resets the amount of items shipped
 ShippingBin * sub_800B0DC(ShippingBin *sbin){
     u32 temp, index;
@@ -79,16 +81,12 @@ u8 sub_800B1CC(ShippingBin *sbin){
     }
 }
 
-
-u32 sub_800E194();
-u32 sub_800E198();
-
 //Adds to the shipping bin's value
-void sub_800B20C(ShippingBin *sbin, u32 *param) {
-    u32 price = sub_800E198(param);
+void sub_800B20C(ShippingBin *sbin, ProductSlot *slot) {
+    u32 price = sub_800E198(slot);
 
     if (price > 0) {
-        sub_800B29C(&sbin->shippingData[sub_800E194(param)]);
+        sub_800B29C(&sbin->shippingData[sub_800E194(slot)]);
 #ifndef NONMATCHING
         asm(""::"r"(sbin->value));
 #endif

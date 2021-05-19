@@ -2,9 +2,9 @@
 
     .global data
 
-	.global gUnk_80F0348
- gUnk_80F0348:
-	.incbin "baserom.gba", 0xF0348, 0x1A6
+	.global gUnk_80F04E4
+ gUnk_80F04E4:
+	.incbin "baserom.gba", 0xF04E4, 0xA
 
 	.global gUnk_80F04EE
  gUnk_80F04EE:
