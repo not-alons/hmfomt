@@ -21,15 +21,15 @@ const u8 * sub_800DB34(ToolSlot *slot) {
         return gText_BrokenTool;
 }
 
-// Returns a slot's unknown short
+// Returns a slot's icon index
 u16 sub_800DB60(ToolSlot *slot) {
     u8 tool = slot->tool;
     u8 bool = tool < NUM_TOOLS;
 
     if(bool)
-        return gTools[slot->tool].unk;
+        return gTools[slot->tool].icon;
     else
-        return 457;// 0x1C9
+        return 457; // Turnip
 }
 
 // Returns a pointer to a slot's tool description

@@ -3,8 +3,8 @@
 // Initializes a food slot
 FoodSlot * sub_800DCA8(FoodSlot *slot, u8 food) {
     slot->food = food;
-    slot->unk_0x1 = 0;
-    slot->unk_0x2 = 0;
+    slot->stamina = 0;
+    slot->fatigue = 0;
 
     return slot;
 }
@@ -25,40 +25,40 @@ const u8 * sub_800DCB8(FoodSlot *slot) {
         return gText_BrokenFood;
 }
 
-// Returns a slot's unknown short
+// Returns a slot's icon index
 u16 sub_800DCE0(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gFoods[slot->food].unk_8;
+        return gFoods[slot->food].icon;
     else
-        return 0x1AC;
+        return 428; // Stones
 }
 
-// Returns a slot's unknown s8 + some modifier
+// Returns a slot's stamina bonus + the food's stamina bonus
 s32 sub_800DD08(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gFoods[slot->food].unk_5 + slot->unk_0x1;
+        return gFoods[slot->food].stamina + slot->stamina;
     else
         return -100;
 }
 
-// Returns a slot's second unknown s8 + some modifier
+// Returns a slot's fatigue bonus + the food's fatigue bonus
 s32 sub_800DD3C(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gFoods[slot->food].unk_6 + slot->unk_0x2;
+        return gFoods[slot->food].fatigue + slot->fatigue;
     else
         return 100;
 }
 
-// Returns a slot's unknown s8
+// Returns a slot's stamina bonus
 NAKED
 s8 sub_800DD6C(FoodSlot *slot) {
     asm_unified("\n\
@@ -84,7 +84,7 @@ s8 sub_800DD6C(FoodSlot *slot) {
     ");
 }
 
-// Returns a slot's second unknown s8
+// Returns a slot's fatigue bonus
 NAKED
 s8 sub_800DD8C(FoodSlot *slot) {
     asm_unified("\n\
@@ -109,15 +109,15 @@ s8 sub_800DD8C(FoodSlot *slot) {
     ");
 }
 
-// Returns a slot's unknown flag
+// Returns whether the slot contains a drink
 u8 sub_800DDAC(FoodSlot *slot) {
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool)
-        return gFoods[slot->food].unk_4;
+        return gFoods[slot->food].isDrink;
     else
-        return 0;
+        return FALSE;
 }
 
 // Returns a pointer to a slot's food description
@@ -139,30 +139,30 @@ const u8 * sub_800DDD4(FoodSlot *slot) {
 #endif
 }
 
-// Adds to both slot's unknown s8
-void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2) {
+// Adds to the slot's stamina and fatigue bonus
+void sub_800DE0C(FoodSlot *slot, s8 stamina, s8 fatigue) {
     s32 total;
     u8 food = slot->food;
     u8 bool = food < NUM_FOODS;
 
     if(bool){
-        total = slot->unk_0x1 + param1;
+        total = slot->stamina + stamina;
 
         if(total < -128)
             total = -128;
         else if(total > 127)
             total = 127;
         
-        slot->unk_0x1 = total;
+        slot->stamina = total;
 
-        total = slot->unk_0x2 + param2;
+        total = slot->fatigue + fatigue;
         
         if(total < -128)
             total = -128;
         else if(total > 127)
             total = 127;
         
-        slot->unk_0x2 = total;
+        slot->fatigue = total;
     }
 }
 

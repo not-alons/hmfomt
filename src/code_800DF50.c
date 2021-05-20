@@ -21,15 +21,15 @@ const u8 * sub_800DF58(ArticleSlot *slot) {
         return gText_BrokenArticle;
 }
 
-// Returns a slot's unknown short
+// Returns a slot's icon index
 u16 sub_800DF84(ArticleSlot *slot) {
     u8 article = slot->article;
     u8 bool = article < NUM_ARTICLES;
 
     if(bool)
-        return gArticles[slot->article].unk;
+        return gArticles[slot->article].icon;
     else
-        return 0x1C9;
+        return 457; // Turnip
 }
 
 // Returns whether a slot's article can be gift wrapped

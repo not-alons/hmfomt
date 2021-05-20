@@ -377,8 +377,8 @@ typedef struct __attribute__((__packed__)) ToolSlot {
 
 typedef struct FoodSlot {
     u8 food;
-    s8 unk_0x1;
-    s8 unk_0x2;
+    s8 stamina;
+    s8 fatigue;
     u8 quantity;
 } FoodSlot;
 
@@ -395,22 +395,22 @@ typedef struct ProductSlot {
 
 typedef struct Tool {
     const u8 * name;
-    u16 unk;
+    u16 icon;
     const u8 * desc;
 } Tool;
 
 typedef struct Food {
     const u8* name;
-    u8 unk_4:1; // Uses the drink animation when consumed
-    s8 unk_5;   // Stamina recovered when consumed
-    s8 unk_6;   // Fatigue recovered when consumed
-    u16 unk_8;
+    u8 isDrink:1; // Uses the drink animation when consumed
+    s8 stamina;   // Stamina recovered when consumed
+    s8 fatigue;   // Fatigue recovered when consumed
+    u16 icon;
     const u8* desc;
 } Food;
 
 typedef struct Article {
     const u8* name;
-    u16 unk;
+    u16 icon;
     const u8* desc;
 } Article;
 
@@ -477,13 +477,13 @@ FoodSlot * sub_800DCA8(FoodSlot *slot, u8 food);
 u32 sub_800DCB4(FoodSlot *slot);
 // Returns a pointer to a slot's food name
 const u8 * sub_800DCB8(FoodSlot *slot);
-// Returns a slot's unknown short
+// Returns a slot's icon index
 u16 sub_800DCE0(FoodSlot *slot);
-// Returns a slot's unknown s8
+// Returns a slot's stamina bonus
 s8 sub_800DD6C(FoodSlot *slot);
-// Returns a slot's second unknown s8
+// Returns a slot's fatigue bonus
 s8 sub_800DD8C(FoodSlot *slot);
-// Adds to both slot's unknown s8
+// Adds to the slot's stamina and fatigue bonus
 void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2);
 // Initializes a food slot
 FoodSlot * sub_800DE68(FoodSlot *slot);
@@ -500,7 +500,7 @@ void sub_800DF50(ArticleSlot *slot, u8 article);
 s32 sub_800DF54(ArticleSlot *slot);
 // Returns a pointer to a slot's article name
 const u8 * sub_800DF58(ArticleSlot *slot);
-// Returns a slot's unknown short
+// Returns a slot's icon index
 u16 sub_800DF84(ArticleSlot *slot);
 // Returns whether a slot's article can be gift wrapped
 u8 sub_800DFB0(ArticleSlot *slot);
