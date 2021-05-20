@@ -60,7 +60,7 @@ s32 sub_800DD3C(FoodSlot *slot) {
 
 // Returns a slot's unknown s8
 NAKED
-s32 sub_800DD6C(FoodSlot *slot) {
+s8 sub_800DD6C(FoodSlot *slot) {
     asm_unified("\n\
         push {lr}\n\
         adds r2, r0, #0\n\
@@ -86,7 +86,7 @@ s32 sub_800DD6C(FoodSlot *slot) {
 
 // Returns a slot's second unknown s8
 NAKED
-s32 sub_800DD8C(FoodSlot *slot) {
+s8 sub_800DD8C(FoodSlot *slot) {
     asm_unified("\n\
         push {lr}\n\
         adds r2, r0, #0\n\

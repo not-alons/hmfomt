@@ -27,6 +27,8 @@ SECTIONS
         src/code_800E0F0.o(.text); /* ProductSlot   */
 
         asm/code_800E268.o(.text);
+        src/code_800EFEC.o(.text); /* RucksackSlot  */
+        asm/code_800F170.o(.text);
 
         src/animal.o(.text);
         src/pet.o(.text);

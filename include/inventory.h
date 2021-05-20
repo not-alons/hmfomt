@@ -479,6 +479,10 @@ u32 sub_800DCB4(FoodSlot *slot);
 const u8 * sub_800DCB8(FoodSlot *slot);
 // Returns a slot's unknown short
 u16 sub_800DCE0(FoodSlot *slot);
+// Returns a slot's unknown s8
+s8 sub_800DD6C(FoodSlot *slot);
+// Returns a slot's second unknown s8
+s8 sub_800DD8C(FoodSlot *slot);
 // Adds to both slot's unknown s8
 void sub_800DE0C(FoodSlot *slot, s8 param1, s8 param2);
 // Initializes a food slot
@@ -498,6 +502,8 @@ s32 sub_800DF54(ArticleSlot *slot);
 const u8 * sub_800DF58(ArticleSlot *slot);
 // Returns a slot's unknown short
 u16 sub_800DF84(ArticleSlot *slot);
+// Returns whether a slot's article can be gift wrapped
+u8 sub_800DFB0(ArticleSlot *slot);
 // Initializes an article slot
 ArticleSlot * sub_800E010(ArticleSlot *slot);
 // Initializes an article slot
