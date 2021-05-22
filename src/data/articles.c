@@ -189,571 +189,571 @@ const u8 gText_FrisbeeDesc[]             = "Frisbee\r\nUse to play with your Dog
 const Article gArticles[] = {
     [ARTICLE_FLOWER_MOON_DROP] = {
         .name = gText_MoonDropGrassName,
-        .unk  = 303,
+        .icon = 303,
         .desc = gText_MoonDropGrassDesc
     },
 
     [ARTICLE_FLOWER_PINK_CAT] = {
         .name = gText_PinkCatGrassName,
-        .unk  = 337,
+        .icon = 337,
         .desc = gText_PinkCatGrassDesc
     },
 
     [ARTICLE_FLOWER_MAGIC_BLUE] = {
         .name = gText_BlueMagicGrassName,
-        .unk  = 272,
+        .icon = 272,
         .desc = gText_BlueMagicGrassDesc
     },
 
     [ARTICLE_FLOWER_MAGIC_RED] = {
         .name = gText_RedMagicGrassName,
-        .unk  = 274,
+        .icon = 274,
         .desc = gText_RedMagicGrassDesc
     },
 
     [ARTICLE_FLOWER_TOY] = {
         .name = gText_ToyFlowerName,
-        .unk  = 452,
+        .icon = 452,
         .desc = gText_ToyFlowerDesc
     },
 
     [ARTICLE_WOOL_S] = {
         .name = gText_WoolSName,
-        .unk  = 488,
+        .icon = 488,
         .desc = gText_WoolSDesc
     },
 
     [ARTICLE_WOOL_M] = {
         .name = gText_WoolMName,
-        .unk  = 486,
+        .icon = 486,
         .desc = gText_WoolMDesc
     },
 
     [ARTICLE_WOOL_L] = {
         .name = gText_WoolLName,
-        .unk  = 485,
+        .icon = 485,
         .desc = gText_WoolLDesc
     },
 
     [ARTICLE_WOOL_G] = {
         .name = gText_WoolGName,
-        .unk  = 484,
+        .icon = 484,
         .desc = gText_WoolGDesc
     },
 
     [ARTICLE_WOOL_P] = {
         .name = gText_WoolPName,
-        .unk  = 487,
+        .icon = 487,
         .desc = gText_WoolPDesc
     },
 
     [ARTICLE_WOOL_X] = {
         .name = gText_WoolPName,
-        .unk  = 489,
+        .icon = 489,
         .desc = gText_WoolPDesc
     },
 
     [ARTICLE_YARN_S] = {
         .name = gText_YarnSName,
-        .unk  = 482,
+        .icon = 482,
         .desc = gText_YarnSDesc
     },
 
     [ARTICLE_YARN_M] = {
         .name = gText_YarnMName,
-        .unk  = 480,
+        .icon = 480,
         .desc = gText_YarnMDesc
     },
 
     [ARTICLE_YARN_L] = {
         .name = gText_YarnLName,
-        .unk  = 479,
+        .icon = 479,
         .desc = gText_YarnLDesc
     },
 
     [ARTICLE_YARN_G] = {
         .name = gText_YarnGName,
-        .unk  = 478,
+        .icon = 478,
         .desc = gText_YarnGDesc
     },
 
     [ARTICLE_YARN_P] = {
         .name = gText_YarnPName,
-        .unk  = 481,
+        .icon = 481,
         .desc = gText_YarnPDesc
     },
 
     [ARTICLE_YARN_X] = {
         .name = gText_YarnXName,
-        .unk  = 483,
+        .icon = 483,
         .desc = gText_YarnXDesc
     },
 
     [ARTICLE_ORE_JUNK] = {
         .name = gText_JunkOreName,
-        .unk  = 267,
+        .icon = 267,
         .desc = gText_JunkOreDesc
     },
 
     [ARTICLE_ORE_COPPER] = {
         .name = gText_CopperName,
-        .unk  = 108,
+        .icon = 108,
         .desc = gText_CopperDesc
     },
 
     [ARTICLE_ORE_SILVER] = {
         .name = gText_SilverName,
-        .unk  = 411,
+        .icon = 411,
         .desc = gText_SilverDesc
     },
 
     [ARTICLE_ORE_GOLD] = {
         .name = gText_GoldName,
-        .unk  = 209,
+        .icon = 209,
         .desc = gText_GoldDesc
     },
 
     [ARTICLE_ORE_MYSTRILE] = {
         .name = gText_MystrileName,
-        .unk  = 299,
+        .icon = 299,
         .desc = gText_MystrileDesc
     },
 
     [ARTICLE_ORE_ORICHALC] = {
         .name = gText_OrichalcName,
-        .unk  = 326,
+        .icon = 326,
         .desc = gText_OrichalcDesc
     },
 
     [ARTICLE_ORE_ADAMANTITE] = {
         .name = gText_AdamantiteName,
-        .unk  = 0,
+        .icon = 0,
         .desc = gText_AdamantiteDesc
     },
 
     [ARTICLE_STONE_MOON] = {
         .name = gText_MoonStoneName,
-        .unk  = 302,
+        .icon = 302,
         .desc = gText_MoonStoneDesc
     },
 
     [ARTICLE_SAND_ROSE] = {
         .name = gText_SandRoseName,
-        .unk  = 397,
+        .icon = 397,
         .desc = gText_SandRoseDesc
     },
 
     [ARTICLE_DIAMOND_PINK] = {
         .name = gText_PinkDiamondName,
-        .unk  = 336,
+        .icon = 336,
         .desc = gText_PinkDiamondDesc
     },
 
     [ARTICLE_ALEXANDRITE] = {
         .name = gText_AlexandriteName,
-        .unk  = 3,
+        .icon = 3,
         .desc = gText_AlexandriteDesc
     },
 
     [ARTICLE_STONE_MYTHIC] = {
         .name = gText_MythicStoneName,
-        .unk  = 395,
+        .icon = 395,
         .desc = gText_MythicStoneDesc
     },
 
     [ARTICLE_DIAMOND] = {
         .name = gText_DiamondName,
-        .unk  = 120,
+        .icon = 120,
         .desc = gText_DiamondDesc
     },
 
     [ARTICLE_EMERALD] = {
         .name = gText_EmeraldName,
-        .unk  = 137,
+        .icon = 137,
         .desc = gText_EmeraldDesc
     },
 
     [ARTICLE_RUBY] = {
         .name = gText_RubyName,
-        .unk  = 393,
+        .icon = 393,
         .desc = gText_RubyDesc
     },
 
     [ARTICLE_TOPAZ] = {
         .name = gText_TopazName,
-        .unk  = 451,
+        .icon = 451,
         .desc = gText_TopazDesc
     },
 
     [ARTICLE_PERIDOT] = {
         .name = gText_PeridotName,
-        .unk  = 330,
+        .icon = 330,
         .desc = gText_PeridotDesc
     },
 
     [ARTICLE_FLUORITE] = {
         .name = gText_FluoriteName,
-        .unk  = 164,
+        .icon = 164,
         .desc = gText_FluoriteDesc
     },
 
     [ARTICLE_AGATE] = {
         .name = gText_AgateName,
-        .unk  = 2,
+        .icon = 2,
         .desc = gText_AgateDesc
     },
 
     [ARTICLE_AMETHYST] = {
         .name = gText_AmethystName,
-        .unk  = 5,
+        .icon = 5,
         .desc = gText_AmethystDesc
     },
 
     [ARTICLE_JEWEL_GODDESS] = {
         .name = gText_HarvestGoddessJewelName,
-        .unk  = 207,
+        .icon = 207,
         .desc = gText_HarvestGoddessJewelDesc
     },
 
     [ARTICLE_JEWEL_KAPPA] = {
         .name = gText_KappaJewelName,
-        .unk  = 261,
+        .icon = 261,
         .desc = gText_KappaJewelDesc
     },
 
     [ARTICLE_JEWEL_TRUTH] = {
         .name = gText_JewelofTruthName,
-        .unk  = 455,
+        .icon = 455,
         .desc = gText_JewelofTruthDesc
     },
 
     [ARTICLE_SUN_SPRING] = {
         .name = gText_TheSpringSunName,
-        .unk  = 426,
+        .icon = 426,
         .desc = gText_TheSpringSunDesc
     },
 
     [ARTICLE_SUN_SUMMER] = {
         .name = gText_TheSummerSunName,
-        .unk  = 436,
+        .icon = 436,
         .desc = gText_TheSpringSunDesc
     },
 
     [ARTICLE_SUN_AUTUMN] = {
         .name = gText_TheAutumnSunName,
-        .unk  = 12,
+        .icon = 12,
         .desc = gText_TheSpringSunDesc
     },
 
     [ARTICLE_SUN_WINTER] = {
         .name = gText_TheWinterSunName,
-        .unk  = 476,
+        .icon = 476,
         .desc = gText_TheSpringSunDesc
     },
 
     [ARTICLE_BRACELET] = {
         .name = gText_BraceletName,
-        .unk  = 75,
+        .icon = 75,
         .desc = gText_BraceletDesc
     },
 
     [ARTICLE_NECKLACE] = {
         .name = gText_NecklaceName,
-        .unk  = 311,
+        .icon = 311,
         .desc = gText_NecklaceDesc
     },
 
     [ARTICLE_EARRINGS] = {
         .name = gText_EarringsName,
-        .unk  = 123,
+        .icon = 123,
         .desc = gText_EarringsDesc
     },
 
     [ARTICLE_BROACH] = {
         .name = gText_BroachName,
-        .unk  = 79,
+        .icon = 79,
         .desc = gText_BroachDesc
     },
 
     [ARTICLE_WEEDS] = {
         .name = gText_WeedsName,
-        .unk  = 471,
+        .icon = 471,
         .desc = gText_WeedsDesc
     },
 
     [ARTICLE_STONES] = {
         .name = gText_StonesName,
-        .unk  = 428,
+        .icon = 428,
         .desc = gText_StonesDesc
     },
 
     [ARTICLE_BRANCHES] = {
         .name = gText_BranchesName,
-        .unk  = 76,
+        .icon = 76,
         .desc = gText_BranchesDesc
     },
 
     [ARTICLE_RECIPE_FRENCH_FRIES] = {
         .name = gText_LithographName,
-        .unk  = 270,
+        .icon = 270,
         .desc = gText_LithographDesc
     },
 
     [ARTICLE_RECIPE_KETCHUP] = {
         .name = gText_MessageinaBottleName,
-        .unk  = 74,
+        .icon = 74,
         .desc = gText_MessageinaBottleDesc
     },
 
     [ARTICLE_BALL] = {
         .name = gText_BallName,
-        .unk  = 49,
+        .icon = 49,
         .desc = gText_BallDesc
     },
 
     [ARTICLE_PIRATE_TREASURE] = {
         .name = gText_PirateTreasureName,
-        .unk  = 340,
+        .icon = 340,
         .desc = gText_PirateTreasureDesc
     },
 
     [ARTICLE_FOSSIL] = {
         .name = gText_FossilofFishName,
-        .unk  = 167,
+        .icon = 167,
         .desc = gText_FossilofFishDesc
     },
 
     [ARTICLE_EMPTY_CAN] = {
         .name = gText_EmptyCanName,
-        .unk  = 87,
+        .icon = 87,
         .desc = gText_EmptyCanDesc
     },
 
     [ARTICLE_BOOTS] = {
         .name = gText_BootsName,
-        .unk  = 73,
+        .icon = 73,
         .desc = gText_BootsDesc
     },
 
     [ARTICLE_FISH_BONES] = {
         .name = gText_FishBonesName,
-        .unk  = 71,
+        .icon = 71,
         .desc = gText_FishBonesDesc
     },
 
     [ARTICLE_KAREN_WINE] = {
         .name = gText_KarenWineName,
-        .unk  = 263,
+        .icon = 263,
         .desc = gText_KarenWineDesc
     },
 
     [ARTICLE_POPURI_MUD_BALL] = {
         .name = gText_PopuriMudBallName,
-        .unk  = 345,
+        .icon = 345,
         .desc = gText_PopuriMudBallDesc
     },
 
     [ARTICLE_ANN_MUSIC_BOX] = {
         .name = gText_AnnMusicBoxName,
-        .unk  = 360,
+        .icon = 360,
         .desc = gText_AnnMusicBoxDesc
     },
 
     [ARTICLE_MARY_GREAT_BOOK] = {
         .name = gText_MaryGreatBookName,
-        .unk  = 277,
+        .icon = 277,
         .desc = gText_MaryGreatBookDesc
     },
 
     [ARTICLE_ELLI_PRESSED_FLOWER] = {
         .name = gText_ElliPressedFlwrName,
-        .unk  = 136,
+        .icon = 136,
         .desc = gText_ElliPressedFlwrDesc
     },
 
     [ARTICLE_ALBUM_1] = {
         .name = gText_Album1Name,
-        .unk  = 361,
+        .icon = 361,
         .desc = gText_Album1Desc
     },
 
     [ARTICLE_ALBUM_2] = {
         .name = gText_Album2Name,
-        .unk  = 362,
+        .icon = 362,
         .desc = gText_Album2Desc
     },
 
     [ARTICLE_ALBUM_3] = {
         .name = gText_Album3Name,
-        .unk  = 363,
+        .icon = 363,
         .desc = gText_Album3Desc
     },
 
     [ARTICLE_ALBUM_4] = {
         .name = gText_Album4Name,
-        .unk  = 364,
+        .icon = 364,
         .desc = gText_Album4Desc
     },
 
     [ARTICLE_ALBUM_5] = {
         .name = gText_Album5Name,
-        .unk  = 365,
+        .icon = 365,
         .desc = gText_Album5Desc
     },
 
     [ARTICLE_ALBUM_6] = {
         .name = gText_Album6Name,
-        .unk  = 366,
+        .icon = 366,
         .desc = gText_Album6Desc
     },
 
     [ARTICLE_ALBUM_7] = {
         .name = gText_Album7Name,
-        .unk  = 367,
+        .icon = 367,
         .desc = gText_Album7Desc
     },
 
     [ARTICLE_ALBUM_8] = {
         .name = gText_Album8Name,
-        .unk  = 368,
+        .icon = 368,
         .desc = gText_Album8Desc
     },
 
     [ARTICLE_ALBUM_9] = {
         .name = gText_Album9Name,
-        .unk  = 369,
+        .icon = 369,
         .desc = gText_Album9Desc
     },
 
     [ARTICLE_ALBUM_10] = {
         .name = gText_Album10Name,
-        .unk  = 370,
+        .icon = 370,
         .desc = gText_Album10Desc
     },
 
     [ARTICLE_ALBUM_11] = {
         .name = gText_Album11Name,
-        .unk  = 371,
+        .icon = 371,
         .desc = gText_Album11Desc
     },
 
     [ARTICLE_ALBUM_12] = {
         .name = gText_Album12Name,
-        .unk  = 372,
+        .icon = 372,
         .desc = gText_Album12Desc
     },
 
     [ARTICLE_ALBUM_13] = {
         .name = gText_Album13Name,
-        .unk  = 373,
+        .icon = 373,
         .desc = gText_Album13Desc
     },
 
     [ARTICLE_ALBUM_14] = {
         .name = gText_Album14Name,
-        .unk  = 374,
+        .icon = 374,
         .desc = gText_Album14Desc
     },
 
     [ARTICLE_ALBUM_15] = {
         .name = gText_Album15Name,
-        .unk  = 375,
+        .icon = 375,
         .desc = gText_Album15Desc
     },
 
     [ARTICLE_BAND_AID] = {
         .name = gText_BandAidName,
-        .unk  = 52,
+        .icon = 52,
         .desc = gText_BandAidDesc
     },
 
     [ARTICLE_BOOK] = {
         .name = gText_BookName,
-        .unk  = 72,
+        .icon = 72,
         .desc = gText_BookDesc
     },
 
     [ARTICLE_PERFUME] = {
         .name = gText_PerfumeName,
-        .unk  = 329,
+        .icon = 329,
         .desc = gText_PerfumeDesc
     },
 
     [ARTICLE_PHOTO] = {
         .name = gText_PhotoName,
-        .unk  = 331,
+        .icon = 331,
         .desc = gText_PhotoDesc
     },
 
     [ARTICLE_PLANT_ENCYCLOPEDIA] = {
         .name = gText_PlantEncyclopediaName,
-        .unk  = 342,
+        .icon = 342,
         .desc = gText_PlantEncyclopediaDesc
     },
 
     [ARTICLE_INVITATION] = {
         .name = gText_InvitationName,
-        .unk  = 258,
+        .icon = 258,
         .desc = gText_InvitationDesc
     },
 
     [ARTICLE_DRESS] = {
         .name = gText_DressName,
-        .unk  = 121,
+        .icon = 121,
         .desc = gText_DressDesc
     },
 
     [ARTICLE_FACIAL_PACK] = {
         .name = gText_FacialPackName,
-        .unk  = 139,
+        .icon = 139,
         .desc = gText_FacialPackDesc
     },
 
     [ARTICLE_SKIN_LOTION] = {
         .name = gText_SkinLotionName,
-        .unk  = 412,
+        .icon = 412,
         .desc = gText_SkinLotionDesc
     },
 
     [ARTICLE_SUNBLOCK] = {
         .name = gText_SunblockName,
-        .unk  = 437,
+        .icon = 437,
         .desc = gText_SunblockDesc
     },
 
     [ARTICLE_LUMBER] = {
         .name = gText_LumberName,
-        .unk  = 278,
+        .icon = 278,
         .desc = gText_LumberDesc
     },
 
     [ARTICLE_LUMBER_GOLDEN] = {
         .name = gText_GoldenLumberName,
-        .unk  = 210,
+        .icon = 210,
         .desc = gText_GoldenLumberDesc
     },
 
     [ARTICLE_ANIMAL_FODDER] = {
         .name = gText_AnimalFodderName,
-        .unk  = 166,
+        .icon = 166,
         .desc = gText_AnimalFodderDesc
     },
 
     [ARTICLE_CHICKEN_FEED] = {
         .name = gText_ChickenFeedName,
-        .unk  = 231,
+        .icon = 231,
         .desc = gText_ChickenFeedDesc
     },
 
     [ARTICLE_CERTIFICATE] = {
         .name = gText_LotteryName,
-        .unk  = 271,
+        .icon = 271,
         .desc = gText_LotteryDesc
     },
 
     [ARTICLE_FRISBEE] = {
         .name = gText_FrisbeeName,
-        .unk  = 201,
+        .icon = 201,
         .desc = gText_FrisbeeDesc
     }
 };
