@@ -1,4 +1,4 @@
-#include "sheep.h"
+#include "barn_animal.h"
 
 extern u8 gUnk_81036A0[];
 

@@ -19,8 +19,10 @@ SECTIONS
         asm/code_800C450.o(.text);
         
         src/code_800CCAC.o(.text); /* CoopSlot & Incubator */
-        asm/code_800CDBC.o(.text);
-        
+
+        src/code_800CDBC.o(.text); /* Barn          */
+        asm/code_800D074.o(.text);
+        src/code_800D9FC.o(.text); /* BarnSlot      */
         src/code_800DB2C.o(.text); /* ToolSlot      */
         src/code_800DCA8.o(.text); /* FoodSlot      */
         src/code_800DF50.o(.text); /* ArticleSlot   */

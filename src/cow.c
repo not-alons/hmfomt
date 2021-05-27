@@ -1,4 +1,4 @@
-#include "cow.h"
+#include "barn_animal.h"
 
 //RNG functions
 extern u32 sub_80D11E4();
